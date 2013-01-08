@@ -1,0 +1,15 @@
+For file names, module_filename.c
+For function names, module_function_name.c
+
+4space indentation
+
+Compulsory comment in the beginning of every C/Header file in doxygen specified format
+Compulsory comment for every global variable in doxygen specified format
+Compulsory comment in the beginning of every method in doxygen specified format
+Compulsory comment about every struct on top of it and for each of its member variable in doxygen specified format
+
+For any logic exceeding 4 lines, good-to-have comments
+
+No check-ins without review on any C/Header/Unit test files/documentation/README files
+Compilation only using Makefile
+

@@ -1,0 +1,36 @@
+
+First Module to complete ---- No dependency on any other module. Requires knowledge of pcap library (or winpcap for windows)
+packet capture module ----- Identify the interface, Sniff the interface, Capture the packet, Packet Abstraction
+	Interface identifier ---- holds a struct for interface on which to capture packets
+	Packet struct and functions on top of a packet --- Provides an abstraction for Packet - (acts as a Packet object in OOPS terms)
+	Sniffer --- Given an interface, sniffs for packets and store them in Packet objects
+	Module controller ---  Performs the logical steps this module has to perform - Identify the interface, sniff the interface, store 					the packets in Packet objects
+
+Second module --- Has dependency on Packet capture module
+Packet Analyser module --- Take each packet and analyze it. Discard unwanted packages and send required packages for further analysis
+
+
+Need to research on a good Unit test framework for C. Also should use Doxygen for documentation.
+
+
+No dependency. Can be done whenever required.
+Logger Module --- to log any messages. Also to have control of what and how to log once the project becomes to big
+
+
+Once the basic setup of sniffer and analyser is done, we can work on this. Not required in the early stages.
+Mailer Module --- Mail messages appropriately by connecting to a remote smtp server---Need to think whether to do it using a simple smtp server or to use a Website and call php scripts
+
+
+Once sniffer and analyser is done, we need to work on this in coordination with anything we add. Should be well thought out.
+Analytics Module --- Keep track of all kinds of data. Every single kind of data may be used in the future for some kind of report. DO NOT LOG ANY ACTUAL PACKET DATA :)
+
+Can be done independent of sniffer and analyser whenever we need. Dependency on Analytics Data Model finalization. Should be well thought out.
+Reports Module --- Generate reports based on the data collected by analytics module
+This should be written in such a way that the reports can be generated using different kinds of languages. Basically the data structs should be well serialized.
+
+
+
+The data collected by analytics module to be stored in sql database. Reports module queries the same and generates reports.
+This way, we can have a web interface too for the users to check the analytics data.
+
+	
